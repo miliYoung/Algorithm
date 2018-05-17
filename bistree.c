@@ -175,6 +175,24 @@ static void destroy_left(BisTree* tree, BiTreeNode* node)
 	return ;
 }
 
+static int insert(BisTree* tree, BiTreeNode **node, const void* data, int balanced)
+{
+	AvlNode *avl_data;
+	int cmpval,retval;
+
+	if(bitree_is_eob())
+	{
+		if((avl_data = (*AvlNode)malloc(sizeof(AvlNode))) == NULL)
+		{
+			return -1;
+		}
+		
+	}
+	else
+	{
+
+	}
+}
 
 void bistree_init(BisTree* tree, void (*compare)(void* key1, void* key2), void (*destroy)(void *data))
 {
