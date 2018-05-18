@@ -13,7 +13,7 @@ void dlist_init(DList* dlist, void (*destory)(void* data))
 void dlist_destroy(DList* list)
 {
 	void *data;
-	while(dlist_size(list) != 0)
+	while(dlist_size(list) > 0)
 	{
 		if(dlist_remove(list,element,(void**)&data) == 0 && list->destroy != NULL)
 		{
